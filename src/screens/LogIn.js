@@ -49,7 +49,7 @@ export default class Login extends Component{
     }
 }
 
-const styles = StyleSheet.create({
+//const styles = StyleSheet.create({
     wrapper:{
         display: 'flex',
         flex: 1,
