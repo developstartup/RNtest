@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     notificationContent:{
         flexDirection: 'row',
         flexWrap: 'wrap',
-        alightItem: 'flex-start',
+        alignItems: 'flex-start',
     },
     errorText: {
         color: colors.darkOrange,
