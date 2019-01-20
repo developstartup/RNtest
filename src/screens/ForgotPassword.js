@@ -15,7 +15,7 @@ import NextArrowButton from '../components/buttons/NextArrowButton';
 export default class ForgotPassword extends Components {
 
     constructor(props) {
-        super(props){
+        super(props);
             this.state ={
                 formValid: true,
                 loadingVisible: false,
@@ -25,7 +25,6 @@ export default class ForgotPassword extends Components {
             this.handleEmailChange = this.handleEmailChange.bind(this);
             this.goToNextStep = this.goToNextStep.bind(this);
             this.handleCloseNotification = this.handleCloseNotification.bind(this);
-        }
     }
 
     handleEmailChange(email) {
@@ -33,7 +32,7 @@ export default class ForgotPassword extends Components {
         this.setState({ emailAddress: email});
 
         if(!this.state.validEmail){
-            if(emailCheckRegex.test(email){
+            if(emailCheckRegex.test(email)){
                 this.setState({validEmail: true});
             }
         } else {

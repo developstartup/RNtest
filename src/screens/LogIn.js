@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {transparentHeaderStyle} from '../styles/navigation';
+import {LoggedInTabNavigator} from '../navigators/LoggedInTabNavigator';
 import {PropTypes} from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {View, Text, ScrollView, StyleSheet, KeyboardAvoidingView,} from 'react-native';
@@ -10,7 +12,11 @@ import Loader from '../components/Loader';
 
 
 export default class Login extends Component{
-
+    static navigationOptions = () => ({
+        headerLeft : null,
+        headerStyle: transparentHeaderStyle,
+        gesturesEnabled: false,
+    });
 
     constructor(props){
         super(props);
@@ -86,6 +92,7 @@ export default class Login extends Component{
         const background = formValid ? colors.green01 : colors.darkOrange;
         const notificationMarginTop = showNotification ? 10: 0;
         return(
+            <LoggedInTabNavigator/>
             <KeyboardAvoidingView 
                 style={[{backgroundColor: background}, styles.wrapper]}
                 behavior="padding">
